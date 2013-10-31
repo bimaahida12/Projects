@@ -1,0 +1,6 @@
+{ "-id" : ObjectId("51eec2d360340b2160b74ea0"),
+ "product-id" : 1,
+ "product-name" : "Beer \"Zagorka\"",
+ "vendor-name" : "Zagorka Corp.",
+ "total-quantity-sold" : 673,
+ "total-incomes" : "609.2400" }
