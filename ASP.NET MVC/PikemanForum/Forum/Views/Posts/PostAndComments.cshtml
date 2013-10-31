@@ -1,0 +1,91 @@
+﻿@using Forum.Models
+@using PagedList.Mvc
+@using Microsoft.AspNet.Identity
+@model PagedList.IPagedList<Forum.Models.Comment>
+
+@{
+    ViewBag.Title = "title";
+    var post = (Post)ViewBag.post;
+}
+
+<html>
+    <head>
+        <title>Paged List Demo</title>
+        <link href="../../Content/PagedList.css" type="text/javascript" rel="Stylesheet" />
+    </head>
+    <body>
+        
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span9">
+                    <div class="postInPostAndComments">
+                        <div class="span2">
+                            <div style="padding-left: 10px; margin-bottom: 20px; margin-top: 20px;">
+                                <img src="@post.User.PhotoUrl" alt="User Avatar" style="height: 60px;" /><br />
+                                @post.User.UserName
+                                                    </div>
+                                            </div>
+                        <h3>@post.Title</h3>
+
+                        <p>@post.Content</p>
+                    </div>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="offset6">
+                        @if (User.Identity.GetUserId() == post.User.Id || User.IsInRole("Administrator"))
+                        {
+                            @Html.ActionLink("Edit post", "EditPost", "Posts", new { postId = post.Id }, new { @class = "btn btn-info" })
+                            @Html.ActionLink("Delete post", "DeletePost", "Posts", new { postId = post.Id }, new { @class = "btn btn-info" })
+                        }
+
+                        @Ajax.ActionLink("Write comment", "WriteComment", "Posts", new { postId = post.Id },
+                                        new AjaxOptions
+                                        {
+                                            HttpMethod = "GET",
+                                            InsertionMode = InsertionMode.Replace,
+                                            UpdateTargetId = "writeCommentContainer"
+                                        }, new { @class = "btn btn-info" })
+                    </div>
+                }
+                    <br />
+                    <div class="row-fluid">
+                        <div class="span11">
+                            @foreach (var comment in Model)
+                            {
+                                
+                                         
+                                <blockquote class="commentInPost" style="overflow: auto">
+                                    <div style="padding-left: 10px; margin-bottom: 0px; margin-right: 20px;float:left;">
+                                        <img src="@post.User.PhotoUrl" alt="User Avatar" style="height: 60px;" /><br />
+                                        
+                                    </div>
+                                    <p style="margin-bottom: 20px;">
+                                        @comment.Content
+                                    </p> <small>Commented by: @(string.Format("{0} {1}", comment.User.UserName, comment.Timespan.ToString("<HH:mm> <dd/MM/yyyy>")))</small>
+                                </blockquote>
+                                <div style="clear:left"></div>
+                            }
+
+                        <div id="writeCommentContainer"></div>
+
+                        @Html.PagedListPager(Model, page => Url.Action("PostAndComments", "Posts", new { postId = post.Id, page }), new PagedListRenderOptions { DisplayEllipsesWhenNotShowingAllPageNumbers = true, DisplayItemSliceAndTotal = true, UlElementClasses = new[] { "nav" }, ContainerDivClasses = new[] { "navbar" } })
+                        @*@Html.PagedListPager(Model, page => Url.Action("PostAndComments", "Posts", new {postId = post.Id, page }))*@
+                                    
+                                
+                                </div>
+                        <div class="span1">
+                        </div>
+                    </div>
+                </div>
+                <div class="span3">
+                    @Html.Partial("_SearchForm")
+
+                  
+                    @Html.Action("ListCategories", "Home");
+                                  
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

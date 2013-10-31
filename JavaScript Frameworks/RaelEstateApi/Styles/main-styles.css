@@ -1,0 +1,50 @@
+﻿/*#menu {
+
+width:635px;
+}*/
+
+/*#tb-logout {
+position:absolute;
+top:80px;
+left:500px;
+}*/
+
+#wrapper {
+    padding: 1%;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #f3f3f3;
+    min-height: 900px !important;
+/*position:absolute;*/
+/*top:20px;
+left:10%;*/
+}
+
+header > h1{
+    width: 99% !important;
+}
+
+.account-info {
+padding:15px !important;
+}
+
+#accounts-headline {
+margin-left:180px;
+margin-bottom:15px;
+font-size:1.6em;
+}
+
+/*#adverts-btn {
+    position: absolute;
+    top: 75px;
+    right: 10px;
+}*/
+
+a:hover {
+    text-decoration:none !important;
+}
+
+img {
+    width: 450px;
+    height: 250px;
+}

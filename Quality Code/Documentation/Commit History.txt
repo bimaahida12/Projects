@@ -1,0 +1,144 @@
+https://github.com/ovasilev/promethium
+promethium / Commit History 
+
+May 17, 2013
+
+ScoreBoard some unit tests, not all
+ovasilev authored a minute ago
+
+Refactoring-Information-For-Bulls-And-Cows-4.docx added few methods E… …
+todorpr authored 20 minutes ago
+
+Refactoring-Information-For-Bulls-And-Cows-4.docx update
+todorpr authored 38 minutes ago
+
+ExecuteCommand method in Engine refactored, fixed bug in Engine 
+ovasilev authored an hour ago
+
+Scoreboard Print done properly
+ovasilev authored 2 hours ago
+
+ScoreBoard & Engine Unit Tests 
+kaloyan-gospodinov authored 9 hours ago
+
+Unit tests for UserInterface …
+kdikov authored 10 hours ago
+
+Unit tests for CommandParser
+kdikov authored 11 hours ago
+
+Unit tests for GameNumber class
+kdikov authored 11 hours ago
+
+Uploading BullsAndCowsHelp.chm documentation. 
+todorpr authored 13 hours ago
+
+IPlayer.cs and IScoreBoard.cs adding methods/fields comments
+todorpr authored 13 hours ago
+
+UserInterface.cs adding minor summary corrections 
+todorpr authored 13 hours ago
+
+ScoreBoard.cs adding some missing summary/returns in the comments
+todorpr authored 13 hours ago
+
+
+May 16, 2013
+
+Engine and UserInterface classes finished refactoring and documentati… …
+ovasilev authored 14 hours ago
+
+Fixed RevealDigit …
+kdikov authored 17 hours ago
+
+Adding missing documentation in all files 
+kdikov authored 17 hours ago
+
+Regions and documentation added in ScoreBoard …
+kdikov authored 17 hours ago
+
+Formating class Number and change in ScoreBoard …
+kdikov authored 17 hours ago
+
+Interfaces IPlayer and IScoreBoard introduced
+ovasilev authored 18 hours ago
+
+All classes refactored …
+ovasilev authored 19 hours ago
+
+Minor additions to comments in ScoreBoard.cs & UserInterface.cs
+kaloyan-gospodinov authored a day ago
+
+NumberManager.cs to sln 2nd attempt
+kaloyan-gospodinov authored a day ago
+
+Adding NumberManager.cs to SLN
+kaloyan-gospodinov authored a day ago
+
+Engine.cs adding comments
+todorpr authored a day ago
+
+CommandParser.cs adding comments
+todorpr authored a day ago
+
+PlayerCommand.cs adding comments
+todorpr authored a day ago
+
+Player.cs adding header comment
+todorpr authored a day ago
+
+NumberManager.cs adding comments
+todorpr authored a day ago
+
+Refactoring class Engine. New class NumberManager …
+kdikov authored a day ago
+
+
+May 15, 2013
+
+PokajiHelp to ShowHelp
+kaloyan-gospodinov authored 2 days ago
+
+Usings & Rename methods & fields
+kaloyan-gospodinov authored 2 days ago
+
+BullsAndCows.cs all methods except Main, moved to other classes …
+todorpr authored 2 days ago
+
+Engine.cs minor update - clear empty lines
+todorpr authored 2 days ago
+
+UserInterface.cs update
+todorpr authored 2 days ago
+
+PlayerCommand.cs from Internal to Public
+todorpr authored 2 days ago
+
+Engine.cs Update
+todorpr authored 2 days ago
+
+CommandParser.cs Update
+todorpr authored 2 days ago
+
+minor changes to BullsandCows & Scoreboard …
+kaloyan-gospodinov authored 2 days ago
+
+Revert "Project compiling and working" …
+kaloyan-gospodinov authored 3 days ago
+
+Project compiling and working …
+ovasilev authored 3 days ago
+
+
+May 14, 2013
+
+Documentation and tests for class Player …
+kdikov authored 3 days ago
+
+May 13, 2013
+
+Player and ScoreBoard refactored
+ovasilev authored 4 days ago
+
+Initial commit of BullsAndCows game, contains : …
+ovasilev authored 4 days ago
